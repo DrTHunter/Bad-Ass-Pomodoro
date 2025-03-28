@@ -12,15 +12,17 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    position: relative;
+    overflow: hidden;
 }
 
 .container {
-    background-color: #ffffff;
     text-align: center;
-    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
+    padding: 30px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    z-index: 2;
 }
 
 h1 {
@@ -43,7 +45,7 @@ h1 {
     margin: 20px 0;
 }
 
-.controls button, #save-note {
+.controls button, .work-rest-buttons button {
     font-size: 18px;
     padding: 10px 20px;
     margin: 5px;
@@ -65,27 +67,42 @@ button:hover {
     color: white;
 }
 
-#rest-5, #rest-30 {
+#pause {
+    background-color: #FF9800;
+    color: white;
+}
+
+#reset {
     background-color: #f44336;
     color: white;
 }
 
-#save-note {
-    background-color: #0078D4;
+.work-rest-buttons button {
+    background-color: #4CAF50;
     color: white;
-}
-
-textarea {
-    width: 100%;
-    height: 100px;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    margin-top: 10px;
 }
 
 .stats {
     margin-top: 20px;
     font-size: 18px;
     color: #333;
+}
+
+#dancing-animal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+#dancing-animal img {
+    width: 150px;
+    animation: dance 1s infinite;
+}
+
+@keyframes dance {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
 }
