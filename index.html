@@ -22,14 +22,15 @@
         </div>
 
         <div class="controls">
-            <button id="start" onclick="startTimer(25, 0)">Start 25 min Work</button>
-            <button id="rest-5" onclick="startTimer(5, 0)">Start 5 min Rest</button>
-            <button id="rest-30" onclick="startTimer(30, 0)">Start 30 min Rest</button>
+            <button id="start" onclick="startTimer()">Start</button>
+            <button id="pause" onclick="pauseTimer()">Pause</button>
+            <button id="reset" onclick="resetTimer()">Reset</button>
         </div>
 
-        <div class="notes">
-            <textarea id="notes" placeholder="Write notes here..."></textarea>
-            <button id="save-note" onclick="saveNote()">Save Note</button>
+        <div class="work-rest-buttons">
+            <button onclick="startTimer(25, 0)">Start 25 min Work</button>
+            <button onclick="startTimer(5, 0)">Start 5 min Rest</button>
+            <button onclick="startTimer(30, 0)">Start 30 min Rest</button>
         </div>
 
         <div class="stats">
@@ -39,6 +40,11 @@
         </div>
 
         <audio id="alarm" src="https://www.soundjay.com/button/beep-07.wav" preload="auto"></audio>
+    </div>
+
+    <!-- Dancing animal animation -->
+    <div id="dancing-animal">
+        <img src="https://www.example.com/your-dancing-animal.gif" alt="Dancing Animal">
     </div>
 
     <script src="script.js"></script>
